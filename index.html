@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/401dc3733c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+     
+      <div class="container">
+        <nav>
+            <h1 class="h1">SWETHA </h1>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
 
+        </nav>
+        <div class="header-text">
+            <p>Web Designer</p>
+            <h1>Hi, I'm <span>Swetha </span><br> From India</h1>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/img6.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Currently pursuing Master of computer Applications from SRM University,Looking for a challenging role in a reputable organization to gain practical experience where I can utilize my training
+                        and skills for the growth of the organization as well as to expand my knowledge, learning and skills.</p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>  
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Website Development</li>
+                            <li><span>Programming languages</span><br>Java,c#,OOPs Concepts</li>
+                            <li><span>DataBase Management System</span><br>Website Development</li>
+                        </ul>
+                    </div>  
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-current</span><br>web Developer at YHills</li>
+                            <li><span>2024-current</span><br>Campus Ambassador at YHills</li>
+                            <li><span>NPTEL</span><br>DataBase management System</li>
+                            <li><span>EduSkills</span><br>Android Development virtual Internship</li>
+                        </ul>
+                    </div>  
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-2025</span><br>MCA-SRM Institute of Science and Technology</li>
+                            <li><span>2020-2023</span><br>BCA-PSG college of Arts and Science</li>
+                            <li><span>2020</span><br>HSC-Sri vijay vidyalaya matric Hr.Sec.School</li>
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------services---------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <h2>Enrichers of life Trust(NGO)</h2>
+                    <p>Actively participated in organizing and volunteering for community events and initiatives.
+                    Demonstrate leadership and teamwork skills in coordinating charitable activities</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2>Sports E-commerce System</h2>
+                    <p>Developed a full-fledged sports E-commerce website using c#, HTML/CSS and MySQL.
+                        Implemented user authentication, product catalog management, shopping cart functionality, and order processing.
+                        Worked independently and in collaboration with peers, showcasing adaptability and teamwork.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web Design</h2>
+                    <p>Developed a full-fledged landing page and portfolio and a calculator using HTML,CSS and JAVASCRIPT. </p>
+                    <a href="#">Learn more</a>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!----------contact--------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+               <a href="img/swe_Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ swetha<i class="fa-solid fa-heart"></i> </p>
+    </div>
+  </div>
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+ </script>  
+ <script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+ </script> 
+ <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzMQP92LDLLJfxcqkySP0c0TBMYjAZRdQ3bVeiRNEikhQKE93XaiSfYnoWXB3nBjvLq/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
